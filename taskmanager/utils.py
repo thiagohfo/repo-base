@@ -8,7 +8,7 @@ def format_task(task):
         "low": "🟢",
     }
     icon = priority_icons.get(task.get("priority", "normal"), "🔷")
-    return f"{status} {icon} [{task['priority']}] #{task['id']} - {task['title']}"
+    return f"{status} #{task['id']} - {task['title']} [{task['priority']}] {icon}"
 
 def filter_tasks(tasks, show_done=True):
     if show_done:
