@@ -3,11 +3,11 @@
 def format_task(task):
     status = "[ ]"
     priority_icons = {
-        "high": "🔥",
-        "normal": "🔷",
+        "high": "🔴",
+        "normal": "🔵",
         "low": "🟢",
     }
-    icon = priority_icons.get(task.get("priority", "normal"), "🔷")
+    icon = priority_icons.get(task.get("priority", "normal"), "🔵")
     return f"{status} #{task['id']} - {task['title']} [{task['priority']}] {icon}"
 
 def filter_tasks(tasks, show_done=True):
