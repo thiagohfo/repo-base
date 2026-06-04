@@ -6,7 +6,7 @@ def filter_priority(tasks, priority):
 
 def format_task(task):
     priority = task.get("priority", "NORMAL")
-    return f"[{priority}] {task['title']}"
+    return f"[{priority}] - {task['title']}"
 
 def filter_tasks(tasks, show_done=True):
     if show_done:
