@@ -4,6 +4,12 @@ def filter_tasks(tasks, completed=None, priority=None):
 
     filtered = tasks
 
+    if completed is not None:
+        filtered = [
+            task for task in filtered
+            if task["completed"] == completed
+        ]
+
 
 def format_task(task):
     priority = task.get("priority", "NORMAL")
